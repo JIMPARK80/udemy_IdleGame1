@@ -23,6 +23,18 @@ public class EnemyAnimation : MonoBehaviour
     void Update()
     {
         // Resize enemy characters animated
-        transform.localScale = Vector3.MoveTowards(transform.localScale, Vector3.one * activeSize, speed * Time.deltaTime);
+        sprite.localScale = Vector3.MoveTowards(sprite.localScale, Vector3.one * activeSize, speed * Time.deltaTime);
+
+        if(sprite.localScale.x == activeSize)
+        {
+            if(activeSize == maxSize)
+            {
+                activeSize = minSize;
+            }
+            else
+            {
+                activeSize = maxSize;
+            }
+        }
     }
 }

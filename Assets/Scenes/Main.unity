@@ -250,7 +250,7 @@ MonoBehaviour:
   sprite: {fileID: 1932730995}
   speed: 0.5
   minSize: 0.9
-  maxSize: 3
+  maxSize: 1.5
 --- !u!1 &530628317
 GameObject:
   m_ObjectHideFlags: 3
