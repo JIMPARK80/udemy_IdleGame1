@@ -17,6 +17,8 @@ public class EnemyAnimation : MonoBehaviour
     void Start()
     {
         activeSize = maxSize;
+
+        speed = speed * Random.Range(0.75f, 1.25f);
     }
 
     // Update is called once per frame
