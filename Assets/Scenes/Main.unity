@@ -235,6 +235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theRB: {fileID: 275711297}
   moveSpeed: 1
+  damage: 2
 --- !u!114 &275711300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,29 +357,17 @@ GameObject:
   m_Component:
   - component: {fileID: 610423321}
   - component: {fileID: 610423320}
-  - component: {fileID: 610423319}
+  - component: {fileID: 610423325}
   - component: {fileID: 610423322}
   - component: {fileID: 610423324}
   - component: {fileID: 610423323}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &610423319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610423318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea6ccecac2616994a84052ca56084c97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &610423320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,6 +491,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &610423325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610423318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b6ce27da9abcbc4a8e73879b4096686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  maxHealth: 100
 --- !u!1 &997617816
 GameObject:
   m_ObjectHideFlags: 0

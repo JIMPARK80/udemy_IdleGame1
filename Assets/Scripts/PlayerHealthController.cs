@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class PlayerHealthController : MonoBehaviour
 {
+    public static PlayerHealthController instance;
+    // awake function is another default function built into unity
+    // awake happens when an object becomes activated for the first time.
+    private void Awake()
+    {
+        instance = this;
+    }
+
     // Declare current physical health and full health
     public float currentHealth;
     public float maxHealth = 100f;
@@ -19,11 +27,11 @@ public class PlayerHealthController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // check for damage to a player
+        /* check for damage to a player
         if (Input.GetKeyDown(KeyCode.T))
         {
             TakeDamage(10f);
-        }
+        }*/
     }
 
     // to set up a damaging setting for the player
@@ -37,5 +45,7 @@ public class PlayerHealthController : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+
+        Debug.Log("Current Healt" + currentHealth);
     }
 }

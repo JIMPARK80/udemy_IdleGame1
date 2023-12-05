@@ -9,6 +9,8 @@ public class EnemyController : MonoBehaviour
     public float moveSpeed;
     private Transform target;
 
+    public float damage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +18,20 @@ public class EnemyController : MonoBehaviour
     }
 
     // Update is called once per frame
+
     void Update()
     {
         theRB.velocity = (target.position - transform.position).normalized * moveSpeed;
+    }
+
+    // use singleton, which is a way of having one version of a script that any other script can access
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            PlayerHealthController.instance.TakeDamage(damage);
+            Debug.Log("damage: " + damage);
+        }
     }
 }
