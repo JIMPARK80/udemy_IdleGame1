@@ -26,8 +26,8 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         theRB.velocity = (target.position - transform.position).normalized * moveSpeed;
-    
-        if(hitCounter > 0f)
+
+        if (hitCounter > 0f)
         {
             hitCounter -= Time.deltaTime;
         }

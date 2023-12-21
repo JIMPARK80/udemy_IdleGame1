@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealthController : MonoBehaviour
 {
@@ -16,13 +17,20 @@ public class PlayerHealthController : MonoBehaviour
     public float currentHealth;
     public float maxHealth = 100f;
 
+    public Slider healthSlider;
 
     // Start is called before the first frame update
     void Start()
     {
         // At first, the health is full 
         currentHealth = maxHealth;
+
+        // health slider
+        healthSlider.maxValue = maxHealth;
+        healthSlider.value = currentHealth;
     }
+
+
 
     // Update is called once per frame
     void Update()
@@ -45,6 +53,8 @@ public class PlayerHealthController : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+
+        healthSlider.value = currentHealth; 
 
         Debug.Log("Current Healt" + currentHealth);
     }
